@@ -19,21 +19,21 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Overskrift" runat="server" Text="Welcome to Pollpolly"></asp:Label>
         <br />
         <br />
-        &nbsp;&nbsp;<asp:Label ID="LabelNavn" runat="server" Text="Navn"></asp:Label>
+        &nbsp;&nbsp;<asp:Label ID="LabelEmail" runat="server" Text="Email"></asp:Label>
         &nbsp;
-        <asp:TextBox ID="TextBoxNavn" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBoxEmail" runat="server"></asp:TextBox>
         <br />
         <br />
         &nbsp;&nbsp;<asp:Label ID="LabelPass" runat="server" Text="Pass"></asp:Label>
         &nbsp;&nbsp;
-        <asp:TextBox ID="TextBoxPass" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBoxPass" runat="server" ></asp:TextBox>
         <br />
         <br />
         <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="ButtonEnter" runat="server" Text="Enter" />
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="ButtonEnter" runat="server" OnClick="ButtonEnter_Click" Text="Enter" />
         <br />
         <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="ButtonOpret" runat="server" Text="Opret" />
     </div>
     </form>
 </body>

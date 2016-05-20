@@ -31,22 +31,22 @@ namespace SurveySpike {
         protected global::System.Web.UI.WebControls.Label Overskrift;
         
         /// <summary>
-        /// LabelNavn control.
+        /// LabelEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelNavn;
+        protected global::System.Web.UI.WebControls.Label LabelEmail;
         
         /// <summary>
-        /// TextBoxNavn control.
+        /// TextBoxEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxNavn;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxEmail;
         
         /// <summary>
         /// LabelPass control.
@@ -74,14 +74,5 @@ namespace SurveySpike {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonEnter;
-        
-        /// <summary>
-        /// ButtonOpret control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonOpret;
     }
 }

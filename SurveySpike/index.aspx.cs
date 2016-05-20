@@ -10,7 +10,7 @@ namespace SurveySpike
 {
     public partial class index : System.Web.UI.Page
     {
-       
+
         protected void Page_Load(object sender, EventArgs e)
         {
             Connect.Access = false;
@@ -19,8 +19,21 @@ namespace SurveySpike
 
         protected void ButtonEnter_Click(object sender, EventArgs e)
         {
-            Response.Redirect("account.aspx");
-        }
+            Connect.checkLogin(TextBoxEmail.Text, TextBoxPass.Text);
+
+            if (Connect.Access == true)
+            {
+                Response.Redirect("Profile.aspx");
+            }
+            else
+            {
+                TextBoxEmail.Text = "";
+                TextBoxPass.Text = "";
+            }
+
+
 
         }
-  }
+
+    }
+}
