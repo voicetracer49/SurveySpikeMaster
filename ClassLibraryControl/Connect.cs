@@ -204,8 +204,77 @@ namespace ClassLibraryControl
             return "profileId"; // Eller Skal vi returnere PrimaryKey value fra profileTabel, så denne kan bruges til forraignkey i surveyTabel, Når man opretter en survay.
         }
 
-        
-      
+        /*
+          ALTER PROC spAddUser
+	      @pNavn VARCHAR(50),
+	      @pAdresse VARCHAR(50),
+	      @pPassword VARCHAR(64),
+	      @pEmail VARCHAR(50)
+       AS
+
+        INSERT INTO dbo.ProfileTabel
+	        (Navn, Adresse, Password, Email)
+        VALUES
+	        (@pNavn, @pAdresse, @pPassword, @pEmail);
+        */
+        public static void AddUser(string pNavn, string pAdresse, string pPassword, string pEmail)
+        {
+            SqlConnection conn = GetConnection();
+            string queryString = "spAddUser";
+            SqlCommand command = new SqlCommand(queryString, conn);
+            command.CommandType = CommandType.StoredProcedure;
+
+            SqlParameter Navn = command.Parameters.Add("@pNavn", SqlDbType.VarChar);
+            SqlParameter Adresse = command.Parameters.Add("@pAdresse", SqlDbType.VarChar);
+            SqlParameter Password = command.Parameters.Add("@pPassword", SqlDbType.VarChar);
+            SqlParameter Email = command.Parameters.Add("@pEmail", SqlDbType.VarChar);
+
+            Navn.Value = pNavn;
+            Adresse.Value = pAdresse;
+            Password.Value = pPassword;
+            Email.Value = pEmail;
+
+            conn.Open();
+            command.ExecuteNonQuery();
+            conn.Close();
+        }
+         /*
+         CREATE PROC spAddShopOwner
+	        @pNavn VARCHAR(50),
+	        @pButik VARCHAR(50),
+	        @pAdresse VARCHAR(50),
+	        @pPassword VARCHAR(64),
+	        @pEmail VARCHAR(50)
+        AS
+
+        INSERT INTO dbo.ProfileTabel
+	        (Navn, Butik, Adresse, Password, Email)
+        VALUES
+	        (@pNavn, @pButik, @pAdresse, @pPassword, @pEmail);
+         */
+        public static void AddShopOwner(string pNavn, string pButik, string pAdresse, string pPassword, string pEmail)
+        {
+            SqlConnection conn = GetConnection();
+            string queryString = "spAddUser";
+            SqlCommand command = new SqlCommand(queryString, conn);
+            command.CommandType = CommandType.StoredProcedure;
+
+            SqlParameter Navn = command.Parameters.Add("@pNavn", SqlDbType.VarChar);
+            SqlParameter Butik = command.Parameters.Add("@pButik", SqlDbType.VarChar);
+            SqlParameter Adresse = command.Parameters.Add("@pAdresse", SqlDbType.VarChar);
+            SqlParameter Password = command.Parameters.Add("@pPassword", SqlDbType.VarChar);
+            SqlParameter Email = command.Parameters.Add("@pEmail", SqlDbType.VarChar);
+
+            Navn.Value = pNavn;
+            Butik.Value = pButik;
+            Adresse.Value = pAdresse;
+            Password.Value = pPassword;
+            Email.Value = pEmail;
+
+            conn.Open();
+            command.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }
 
@@ -215,3 +284,4 @@ namespace ClassLibraryControl
 //Procedure:: Hvordan man gør, evt. hvilke sekventielle handlinger det medfører rent teknisk., evt. Classer, Domæner.
 //Parametre i classerne; tech, design.
 // @Sven
+        
