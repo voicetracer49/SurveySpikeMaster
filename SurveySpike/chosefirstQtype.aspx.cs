@@ -15,21 +15,20 @@ namespace SurveySpike
         }
         protected void ButtonEnterType_Click(object sender, EventArgs e)
         {
-            //String med spørgsmålet sættes i connect Class
-            Connect.TextBoxWriteQuestionParam = TextBoxWriteQuestion.Text;
-           
-            /*//Retrieve Selected Text from Dropdown sættes i connect Class
-            Connect.SelectedItemParam = DropDownList1.SelectedItem.Text;
+            //Retrieve Selected Text from Dropdown sættes i connect Class
+            lblSelectedText.Text = DropDownList1.SelectedItem.Text;
             //Retrieve Selected Value from Dropdown sættes i connect Class
-            Connect.SelectedValueParam = DropDownList1.SelectedValue;
-            */
+            lblSelectedValue.Text = DropDownList1.SelectedValue; //DISSE skal sætte labelse i evt: ..
+
+            //String med spørgsmålet og spørgsmålstype sættes via metoden "storeQuestions(string,int)" i connect Class
+            Connect.storeQuestions(TextBoxWriteQuestion.Text, Convert.ToInt32(DropDownList1.SelectedValue));
 
             if (DropDownList1.SelectedValue == "0")   // følgende burde vel foregå i connect class!? og/el. 
             {}
             if (DropDownList1.SelectedValue == "1")
             {
                 // <asp:ListItem Text="Yes/No questions" Value="1"></asp:ListItem> fra webform!
-                Response.Redirect("yesNoQuistions.aspx");           
+               Response.Redirect("yesNoQuistions.aspx");           
             }
             if (DropDownList1.SelectedValue == "2")
             {}
@@ -37,7 +36,8 @@ namespace SurveySpike
             {} 
             if (DropDownList1.SelectedValue == "4")
             {}
-           
+
+            
         }
 
         

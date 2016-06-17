@@ -102,6 +102,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\SurveySpike\yesNoQuistions.aspx">
+      <Link>yesNoQuistions.aspx</Link>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="Entities\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>

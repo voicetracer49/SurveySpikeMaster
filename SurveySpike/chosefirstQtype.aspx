@@ -32,6 +32,11 @@
             <asp:ListItem Text="Qualitativ Svar" Value="4"></asp:ListItem>
         </asp:DropDownList>
         <br />
+        
+        <br /><br />
+         Selected Item Text: <asp:Label ID="lblSelectedText" runat="server"></asp:Label>
+           <br /><br /> 
+         Selected Item Value: <asp:Label ID="lblSelectedValue" runat="server"></asp:Label>
 
     
         <br />

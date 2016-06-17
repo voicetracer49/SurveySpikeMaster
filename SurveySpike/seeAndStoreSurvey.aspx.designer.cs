@@ -10,16 +10,16 @@
 namespace SurveySpike {
     
     
-    public partial class chosefirstQtype {
+    public partial class seeAndStoreSurvey {
         
         /// <summary>
-        /// form1 control.
+        /// form2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
         
         /// <summary>
         /// Overskrift control.
@@ -31,66 +31,48 @@ namespace SurveySpike {
         protected global::System.Web.UI.WebControls.Label Overskrift;
         
         /// <summary>
-        /// LabelWriteQuestion control.
+        /// LabelHvadErDetRigtigeSvar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelWriteQuestion;
+        protected global::System.Web.UI.WebControls.Label LabelHvadErDetRigtigeSvar;
         
         /// <summary>
-        /// TextBoxWriteQuestion control.
+        /// ToSetActualQuestion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxWriteQuestion;
+        protected global::System.Web.UI.WebControls.Label ToSetActualQuestion;
         
         /// <summary>
-        /// LabelCFQT control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelCFQT;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// lblSelectedText control.
+        /// ButtonEnterRightAnswar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSelectedText;
-        
-        /// <summary>
-        /// lblSelectedValue control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSelectedValue;
-        
-        /// <summary>
-        /// ButtonEnterType control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonEnterType;
+        protected global::System.Web.UI.WebControls.Button ButtonEnterRightAnswar;
     }
 }

@@ -40,31 +40,31 @@ namespace SurveySpike {
         protected global::System.Web.UI.WebControls.Label LabelHvadErDetRigtigeSvar;
         
         /// <summary>
-        /// TextBoxSpoergsmaalet control.
+        /// ToSetActualQuestion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxSpoergsmaalet;
+        protected global::System.Web.UI.WebControls.Label ToSetActualQuestion;
         
         /// <summary>
-        /// CheckBoxJa control.
+        /// RadioButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBoxJa;
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
         
         /// <summary>
-        /// CheckBoxNej control.
+        /// RadioButton2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBoxNej;
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton2;
         
         /// <summary>
         /// ButtonEnterRightAnswar control.
@@ -74,23 +74,5 @@ namespace SurveySpike {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonEnterRightAnswar;
-        
-        /// <summary>
-        /// lblSelectedText control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSelectedText;
-        
-        /// <summary>
-        /// lblSelectedValue control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSelectedValue;
     }
 }
