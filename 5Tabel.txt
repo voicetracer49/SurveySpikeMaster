@@ -1,0 +1,54 @@
+CREATE TABLE [dbo].[Answar] (
+    [AnswarId]   INT           IDENTITY (1, 1) NOT NULL,
+    [QuestionId] INT           NOT NULL,
+    [ScaleYesNo] INT           NULL,
+    [String]     VARCHAR (250) NULL,
+    PRIMARY KEY CLUSTERED ([AnswarId] ASC),
+    CONSTRAINT [FK_Answar_SurveyTabel] FOREIGN KEY ([QuestionId]) REFERENCES [dbo].[QuestionTabel] ([QuestionId])
+);
+
+
+
+CREATE TABLE [dbo].[DataTable] (
+    [DataId]       INT          IDENTITY (1, 1) NOT NULL,
+    [QuestionId]   INT          NOT NULL,
+    [AnsvarInt]    VARCHAR (50) NULL,
+    [AnsvarString] VARCHAR (50) NULL,
+    CONSTRAINT [PK__DataTabl__9D05303D820A9732] PRIMARY KEY CLUSTERED ([DataId] ASC),
+    CONSTRAINT [FK_DataTable_QuestionTabel] FOREIGN KEY ([QuestionId]) REFERENCES [dbo].[QuestionTabel] ([QuestionId])
+);
+
+
+
+
+CREATE TABLE [dbo].[ProfileTabel] (
+    [ProfileId] INT          IDENTITY (1, 1) NOT NULL,
+    [Navn]      VARCHAR (50) NULL,
+    [Butik]     VARCHAR (50) NULL,
+    [Adresse]   VARCHAR (50) NULL,
+    [Password]  VARCHAR (50) NOT NULL,
+    [Count]     INT          NULL,
+    [Email]     VARCHAR (50) NOT NULL,
+    CONSTRAINT [PK__ProfileT__290C88E4C63A2696] PRIMARY KEY CLUSTERED ([ProfileId] ASC)
+);
+
+
+
+CREATE TABLE [dbo].[QuestionTabel] (
+    [QuestionId]   INT          IDENTITY (1, 1) NOT NULL,
+    [SurveyId]     INT          NOT NULL,
+    [Question]     VARCHAR (50) NOT NULL,
+    [QuistionType] INT          NOT NULL,
+    [Correct]      INT          NULL,
+    CONSTRAINT [PK__Question__0DC06FACCD7003D7] PRIMARY KEY CLUSTERED ([QuestionId] ASC),
+    CONSTRAINT [FK_QuestionTabel_SurveyTabel] FOREIGN KEY ([SurveyId]) REFERENCES [dbo].[SurveyTabel] ([SurveyId])
+);
+
+
+CREATE TABLE [dbo].[SurveyTabel] (
+    [SurveyId]   INT          IDENTITY (1, 1) NOT NULL,
+    [ProfileId]  INT          NOT NULL,
+    [SurveyNavn] VARCHAR (50) NOT NULL,
+    CONSTRAINT [PK__SurveyTa__A5481F7DBAB409A0] PRIMARY KEY CLUSTERED ([SurveyId] ASC),
+    CONSTRAINT [FK_SurveyTabel_ProfileTabel] FOREIGN KEY ([ProfileId]) REFERENCES [dbo].[ProfileTabel] ([ProfileId])
+);

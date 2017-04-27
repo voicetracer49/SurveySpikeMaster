@@ -1,0 +1,115 @@
+--checkSurveyNameSP -- Check if id has used that surveyname?
+
+CREATE PROC checkSurveyNameSP
+	@pProfileID int, -- altid samme bites
+	@newSurVeyName VARCHAR(50)
+AS
+
+SELECT
+	ProfileId,
+	SurveyNavn,
+	SurveyId -- til questionTabel ;-)
+FROM 
+	dbo.SurveyTabel
+WHERE
+	ProfileId = @pProfileID AND SurveyNavn = @newSurVeyName;
+	-- vælg Email og Password fra Profiletabel hvor email = @pEmail og Password = @pPassword
+
+
+
+
+
+
+
+--spAddQuestion
+CREATE PROC spAddQuestion
+	@SurveyId int,
+	@TextBoxQuestion VARCHAR(50),
+	@QuistionType int,
+	@Correct int
+
+AS
+
+INSERT INTO dbo.QuestionTabel
+	(SurveyId, Question, QuistionType, Correct)
+	VALUES
+	(@SurveyId, @TextBoxQuestion, @QuistionType, @Correct);
+
+
+
+
+
+
+--spAddSurvey
+create PROC spAddSurvey
+	@profileId int,
+	@surveyNavn VARCHAR(50)
+AS
+
+INSERT INTO dbo.SurveyTabel
+	(ProfileId, SurveyNavn)
+	VALUES
+	(@profileId, @surveyNavn);
+
+
+
+
+
+
+--SPgetQuestionId -- Check if id has used that surveyname?
+
+CREATE PROC SPgetQuestionId
+	@pSurveyId int, -- altid samme bites
+	@Question VARCHAR(50)
+AS
+
+SELECT
+	SurveyId,
+	Question,
+	QuestionId -- til setCorrectnes(int setcorrect) ;-)
+
+FROM 
+	dbo.QuestionTabel
+WHERE
+	SurveyId = @pSurveyId; -- AND Question = @Question;
+	-- vælg Email og Password fra Profiletabel hvor email = @pEmail og Password = @pPassword
+
+
+
+
+
+CREATE PROC spSetCorrectnes
+	 @pCorrect int,
+	 @Question varchar(50),
+     @pQuestionId int
+AS
+
+UPDATE dbo.QuestionTabel
+	 SET Correct = @pCorrect
+     Where QuestionId = @pQuestionId AND Question = @Question;
+
+
+
+
+
+
+--spCheckLogin
+CREATE PROC StoPresChreckLogin
+	@pEmail VARCHAR(50),
+	@pPassword VARCHAR(50)
+AS
+
+SELECT
+	Email,
+	Password,
+	ProfileID
+FROM 
+	dbo.ProfileTabel
+WHERE
+	Email = @pEmail AND Password = @pPassword;
+	-- vælg Email og Password fra Profiletabel hvor email = @pEmail og Password = @pPassword
+
+
+
+
+
