@@ -4,6 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <%--<script src="~/scripts/angular.js"></script>--%> <%-- https://docs.microsoft.com/en-us/aspnet/core/client-side/angular  --%>
+
     <title></title>
 </head>
         <body>
@@ -33,7 +35,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="ButtonEnterRightAnswar" runat="server" Text="Enter" onclick="ButtonEnterRightAnswar_Click"/>
     
-        
+        <%--<div data-ng-repeat="survey in surveys">
+            {{survey}}
+        </div>--%>
     
 
     </div>

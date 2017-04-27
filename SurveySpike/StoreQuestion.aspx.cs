@@ -13,7 +13,14 @@ namespace SurveySpike
         {
 
         }
+        protected void ButtonGemOgSe_Click(object sender, EventArgs e)
+        {
 
+         Response.Redirect("seeAndStoreSurvey.aspx");
+
+        }
+
+        //               
 
 
 
